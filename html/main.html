@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <h1>ROCK | PAPER | SCISSORS?</h1>
+
+    <!-- Result display -->
+    <div class="overlay">
+      <div class="overlay-content"></div>
+
+      <!-- restart button -->
+
+      <div class="overlay-btn">
+        <div class="overlay-btn-content">
+          <button class="play-again">Play Again?</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="game">
+      <!-- player select -->
+      <div class="player">
+        <div class="player-main">
+          <h2>PLAYER</h2>
+
+          <div class="score-header">
+            <img src="../images/player1.png" alt="" />
+            <p class="player-score">score:0</p>
+          </div>
+
+          <div class="player-btn">
+            <button class="rock">
+              ROCK
+              <img src="../images/rock1.png" alt="" />
+            </button>
+            <button class="paper">
+              PAPER
+              <img src="../images/paper1.png" alt="" />
+            </button>
+            <button class="scissors">
+              SCISSORS
+              <img src="../images/scissors1.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- computer select -->
+      <div class="computer">
+        <div class="computer-main">
+          <h2>COMPUTER</h2>
+
+          <div class="score-header">
+            <img src="../images/computer1.png" alt="" />
+            <p class="computer-score">score:0</p>
+          </div>
+
+          <div class="computer-btn">
+            <button id="computer-button" class="rock">
+              ROCK
+              <img src="../images/rock1.png" alt="" />
+            </button>
+            <button id="computer-button" class="paper">
+              PAPER
+              <img src="../images/paper1.png" alt="" />
+            </button>
+            <button id="computer-button" class="scissors">
+              SCISSORS
+              <img src="../images/scissors1.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="btn-sound" src="../sounds/Voicy_Clicking Sound Effect.mp3"></audio>
+
+    <audio id="win-sound" src="../sounds/Voicy_You win.mp3"></audio>
+
+    <audio id="lose-sound" src="../sounds/Voicy_You lose .mp3"></audio>
+
+    <audio id="draw-sound" src="../sounds/Voicy_Draw SFX.mp3"></audio>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

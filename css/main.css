@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #2e4b66;
+  padding: 1em 7em;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  padding: 1em 0.5em;
+  /* background-color: white;
+  border-radius: 20px;
+  width: 50%; */
+
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+img{
+    width: 100%;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.score-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0;
+}
+
+.score-header img{
+    width: 85px;
+}
+
+.player,
+.computer {
+  background-color: #456393;
+  padding: 10px 40px;
+  width: 40%;
+  /* text-align: center; */
+  border-radius: 10px;
+  box-shadow: 0 0 7px #464646;
+}
+
+.player-main,
+.computer-main {
+  width: 100%;
+  /* padding:0 1em; */
+}
+
+.player-btn,
+.computer-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button{
+  /* height: 100%; */
+    width: 100%;
+    padding: 20px;
+    border: none;
+    margin: 0 10px 20px 0;
+    box-shadow: 0 0 7px ;
+    border-radius: 10px;
+}
+
+.player-btn button:active{
+  box-shadow: 0 0 12px ;
+  border: 1px solid black;
+  width: 90%;
+
+
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.overlay-content{
+  color: white;
+  text-shadow: -2px 0 15px black;
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.play-again{
+  width: 100%;
+  box-shadow: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  display: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+ transition: 0.5s;
+
+}
+
+.play-again:hover{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+
+  /* box-shadow: 0 0 15px grey; */
+}
+
+/* media query */
+
+
+@media (max-width: 1024px){
+  body{
+    padding: 1.5em;
+
+  }
+
+  .player, .computer{
+    width: 38%;
+    padding: 10px 40px;
+  }
+
+  .player-main, .computer-main{
+    width: 100%;
+  }
+
+  button{
+    width: 100%;
+
+  }
+}
+
+
+@media (max-width: 768px){
+  body{
+    padding: 0.5em 0 2.5em 0 ;
+
+  }
+
+  h1{
+    display: none;
+  
+  }
+
+  .game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 }
+
+  .player, .computer{
+    width: 70%;
+    padding: 25px 15px ;
+    margin-top: 20px;
+  }
+
+  .score-header img{
+    width: 100px;
+  }
+
+  .player-btn, .computer-btn{
+    margin-left: 10px;
+
+  }
+
+  button{
+    width: 100%;
+
+  }
+
+  img{
+    width: 80%;
+  }
+
+  .overlay{
+    top: 0;
+
+  }
+
+  .overlay-content{
+    font-size: 65px;
+
+  }
+
+  .play-again{
+    font-size: 15px;
+    padding: 16px;
+  }
+
+}
+
+@media (max-width: 502px){
+  body{
+    padding: 0.5em 0 2.5em 0 ;
+    margin-top: 5.5rem;
+  }
+
+  h2{
+    font-size: 22px;
+  }
+
+  .score-header img {
+    width: 80px;
+
+  }
+
+  .player, .computer{
+    width: 68%;
+    padding: 10px 20px ;
+    margin-top: 30px;
+  }
+
+
+
+  .overlay-content{
+    font-size: 55px;
+
+  }
+
+  .play-again{
+    font-size: 15px;
+    padding: 16px;
+  }
+
+
+
+}
+
+@media (max-width: 390px){
+  .player, .computer{
+    width: 65%;
+
+  }
+
+  .score-header img{
+    width: 55px;
+  }
+
+  p{
+    font-size: 20px ;
+  }
+
+  .player-btn,.computer-btn{
+    padding: 0 10px ;
+  }
+
+  .player-btn button:active{
+    width: 80%;
+  }
+
+  button{
+    font-size: 11px;
+
+  }
+
+  img{
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 367px){
+
+  button{
+    font-size: 10px;
+
+  }
+
+}
