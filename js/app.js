@@ -5,8 +5,11 @@ const computerChoice = ["rock", "paper", "scissors"];
 
 
 function getComputerChoice() {
-  const randomChoice = Math.floor(Math.random() * computerChoice.length)
-  return computerChoice[randomChoice];
+  const randomChoice = computerChoice[Math.floor(Math.random() * computerChoice.length)]
+  console.log("computer select 1 selected " + randomChoice );
+
+  return randomChoice;
+
   
 }
 
@@ -14,10 +17,11 @@ function getComputerChoice() {
 // function to play a single round of rock paper scissors
 
 let computerSelect = getComputerChoice();
+console.log("computer select 2 selected " + computerSelect);
 
 function singleRound(playerSelection, computerSelection) {
   console.log("Player selected: " + playerSelection);
-  console.log("Computer selected: " + computerSelection);
+  console.log("Computer select 3 selected: " + computerSelection);
 
   if (playerSelection === computerSelection) {
   updatePlayerScore(1)
@@ -173,7 +177,7 @@ document.querySelector('.play-again').addEventListener('click', playClickSound)
 // function to reset computer selection backkround
 
 function resetComputerBackground(){
- const computerSelections = document.querySelectorAll("#computer-button")
+ const computerSelections = document.querySelectorAll("#computer-btn")
  for (const selection of computerSelections){
  selection.style.backgroundColor = "";
 
@@ -188,29 +192,45 @@ function showComputerSelection(computerSelect){
 
 
   if (computerSelect === "rock"){
-    document.getElementsByClassName("rock")[1].style.backgroundColor = "red"
+    document.querySelector(".rock.computer-selection").style.backgroundColor = "red"
 
   }else  if (computerSelect === "paper"){
-    document.getElementsByClassName("paper")[1].style.backgroundColor = "red"
+    document.querySelector(".paper.computer-selection").style.backgroundColor = "red"
 
   }else {
-    document.getElementsByClassName("scissors")[1].style.backgroundColor = "red"
+    document.querySelector(".scissors.computer-selection").style.backgroundColor = "red"
 
 
   }
 }
 
 document.querySelector('.rock').addEventListener('click', () => {
-  computerSelect = getComputerChoice();
-  showComputerSelection(computerSelect)
+  // const computerChoice = computerSelect
+  // // computerSelect = computerChoice;
+  // console.log("computer select 4 selected " + computerSelect);
+  // showComputerSelection(computerChoice)
+  const playerSelection = "paper";
+  const computerSelection = getComputerChoice();
+  singleRound(playerSelection, computerSelection);
 })
 document.querySelector('.paper').addEventListener('click',() => {
-  computerSelect = getComputerChoice();
-  showComputerSelection(computerSelect)
+  // const computerChoice = computerSelect
+  // // computerSelect = computerChoice;
+  // console.log("computer select 4 selected " + computerSelect);
+
+  // showComputerSelection(computerChoice)
+  const playerSelection = "paper";
+  const computerSelection = getComputerChoice();
+  singleRound(playerSelection, computerSelection);
 })
 document.querySelector('.scissors').addEventListener('click', () => {
-  computerSelect = getComputerChoice();
-  showComputerSelection(computerSelect)
+  // const computerChoice = computerSelect
+  // // computerSelect = computerChoice;
+  // console.log("computer select 4 selected " + computerSelect);
+  // showComputerSelection(computerChoice)
+  const playerSelection = "paper";
+  const computerSelection = getComputerChoice();
+  singleRound(playerSelection, computerSelection);
 })
 
 // console.clear()
